@@ -27,5 +27,29 @@ Be sure you explicitly convert input to numerical data before doing any calculat
  */
 
 public class App {
-    
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        final double tax_rate = 5.5;
+        double tax;
+        System.out.print("Enter the price of item 1: ");
+        String item1 = in.nextLine();
+        System.out.print("Enter quantity of item 1: " );
+        String quantity1 = in.nextLine();
+        System.out.print("Enter the price of item 2: ");
+        String item2 = in.nextLine();
+        System.out.print("Enter quantity of item 2: " );
+        String quantity2 = in.nextLine();
+        System.out.print("Enter the price of item 3: ");
+        String item3 = in.nextLine();
+        System.out.print("Enter quantity of item 3: " );
+        String quantity3 = in.nextLine();
+        double subtotal = (Double.parseDouble(item1) * Double.parseDouble(quantity1) + Double.parseDouble(item2) * Double.parseDouble(quantity2) + Double.parseDouble(item3) * Double.parseDouble(quantity3));
+        tax = subtotal * (tax_rate/ 100);
+        double total = subtotal + tax;
+        System.out.printf("subtotal: $%.2f\n",subtotal);
+        System.out.printf("Tax: $%.2f\n",tax);
+        System.out.printf("Total: $%.2f\n",total);
+
+
+    }
 }
